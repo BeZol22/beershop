@@ -1,0 +1,51 @@
+@import '../../../assets/styles/variables' ;
+
+.form-container {
+  display: flex;
+  border: 1px solid $greyColor;
+  outline: 0;
+  // box-sizing: border-box;
+  // -moz-box-sizing: border-box;
+  // -webkit-box-sizing: border-box;
+  width: 520px;
+  height: 40px;
+  &:hover {
+    border: 1px solid $darkGreyColor;
+  }
+  &:focus-within {
+    border: 1px solid $focusColor;
+    border-color: $focusColor;
+
+  }
+  &:active {
+    border: 1px solid $greyColor;
+    border-color: $greyColor;
+  }
+}
+
+input {
+  width: 480px;
+  height: 40px;
+  padding: 0;
+  padding-left: 16px;
+  border-width: 0px;
+  border-color: $focusColor;
+  outline:none;
+  &:focus {
+    outline-offset: 0px;
+    border-color: $focusColor;
+}
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+.search-icon-button {
+  background-color: $primaryColor;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-width: 0;
+}

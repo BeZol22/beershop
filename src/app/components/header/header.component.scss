@@ -1,0 +1,43 @@
+.container {
+  margin-left: 80px;
+  margin-right: 80px;
+  min-height: 48px;
+  max-height: 48px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-container, .language-container {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+// img {
+//   width: 16px;
+//   height: 16px;
+//   margin-right: 4px;
+// }
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.language-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.language-text {
+  margin-right: 4px;
+}
+
+.arrow-icon {
+  min-width: 4px;
+  min-height: 7px;
+}
