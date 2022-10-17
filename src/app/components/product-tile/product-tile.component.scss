@@ -1,0 +1,22 @@
+.container {
+  width: 302px;
+  height: 467px;
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
+  padding: 16px;
+  gap: 16px;
+
+  background: #FFFFFF;
+  /* Greyscale/Light Grey */
+
+  border: 1px solid #E9E9E9;
+  box-shadow: 0px 2px 4px rgba(5, 7, 32, 0.08);
+  border-radius: 4px;
+}

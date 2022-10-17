@@ -18,6 +18,19 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { HeaderComponent } from './components/header/header.component';
 import { UserBarComponent } from './components/user-bar/user-bar.component';
 import { PagesBarComponent } from './components/pages-bar/pages-bar.component';
+import { PrimaryButtonComponent } from './components/buttons/primary-button/primary-button.component';
+import { SecondaryButtonComponent } from './components/buttons/secondary-button/secondary-button.component';
+import { IconOnlyButtonComponent } from './components/buttons/icon-only-button/icon-only-button.component';
+import { TextButtonComponent } from './components/buttons/text-button/text-button.component';
+import { InputFieldComponent } from './components/inputs/input-field/input-field.component';
+import { AddToCartInputFieldComponent } from './components/inputs/add-to-cart-input-field/add-to-cart-input-field.component';
+import { ProductTileTopComponent } from './components/product-tile/product-tile-top/product-tile-top.component';
+import { ProductTileMidComponent } from './components/product-tile/product-tile-mid/product-tile-mid.component';
+import { ProductTileBottomComponent } from './components/product-tile/product-tile-bottom/product-tile-bottom.component';
+import { SaleComponent } from './components/badges/sale/sale.component';
+import { SoldOutComponent } from './components/badges/sold-out/sold-out.component';
+import { NewComponent } from './components/badges/new/new.component';
+import { ProductOfTheWeekComponent } from './components/badges/product-of-the-week/product-of-the-week.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +48,19 @@ import { PagesBarComponent } from './components/pages-bar/pages-bar.component';
     HeaderComponent,
     UserBarComponent,
     PagesBarComponent,
+    PrimaryButtonComponent,
+    SecondaryButtonComponent,
+    IconOnlyButtonComponent,
+    TextButtonComponent,
+    InputFieldComponent,
+    AddToCartInputFieldComponent,
+    ProductTileTopComponent,
+    ProductTileMidComponent,
+    ProductTileBottomComponent,
+    SaleComponent,
+    SoldOutComponent,
+    NewComponent,
+    ProductOfTheWeekComponent,
   ],
   imports: [
     BrowserModule,

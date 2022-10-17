@@ -1,0 +1,17 @@
+@import '../../../../assets/styles/variables';
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 25px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  background-color: $focusColor;
+  color: $whiteColor;
+  border-radius: 4px;
+}

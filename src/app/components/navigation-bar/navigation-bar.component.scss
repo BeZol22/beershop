@@ -1,6 +1,6 @@
 .navigation-container {
-  min-height: 200px;
-  max-height: 200px;
+  height: 200px;
+  height: 200px;
   width: 100vw;
   // background-color: blue;
   // display: flex;
@@ -11,7 +11,7 @@
 .flex-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  // align-items: center;
   margin-left: 80px;
   margin-right: 80px;
   height: 150px;
@@ -19,6 +19,8 @@
 
 .img-container {
   min-width: 400px;
+  display: flex;
+  align-items: center;
 }
 
 img {
@@ -30,16 +32,23 @@ img {
 .nav-middle {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100vw;
 }
 
 .flex-top {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
+  // width: 100vw;
+  // margin-right: 80px;
   justify-content: space-between;
+  padding-top: 42px;
 }
 
 .flex-bottom {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
+
 }
