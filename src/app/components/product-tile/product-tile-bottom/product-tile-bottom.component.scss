@@ -1,4 +1,62 @@
+@import '../../../../assets/styles/variables';
+
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $succesGreen2Color;
+  color: $succesGreen1Color;
+  width: 70px;
+  height: 24px;
+  border-radius: 4px;
+  @include captionSmall;
+}
+
+.price-top-container {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-top-left {
+  height: 32px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  .price {
+    @include headlineH2
+  }
+  .old-price {
+    @include caption;
+    color: $darkGreyColor;
+  }
+}
+
+.price-bottom-container {
+  display: flex;
+  height: 24px;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  .content {
+    @include caption;
+    font-weight: 500;
+  }
+  .liter {
+    @include caption;
+    color: $darkGreyColor;
+  }
+}
+
+.bottom-bottom {
   display: flex;
   gap: 16px;
 }

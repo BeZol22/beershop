@@ -1,16 +1,22 @@
 @import '../../../../assets/styles/variables' ;
-.badge-container {
+.container {
   display: flex;
-  gap: 6px;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+  padding-bottom: 12px;
 }
 
-button {
+.top-left {
   display: flex;
-  justify-content: center;
+  gap: 6px;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  border: 0;
-  background-color: $whiteColor;
+  justify-content: center;
+  padding-right: 6px;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

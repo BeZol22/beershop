@@ -1,1 +1,10 @@
-<p>icon-only-button works!</p>
+<!-- <button>
+  <img src="{{ imageSrc }}" alt="{{ imageAlt }}" />
+</button> -->
+
+<button *ngIf="enabled" class="enabled-button">
+  <div class="{{ image }}"></div>
+</button>
+<button *ngIf="!enabled" class="disabled-button">
+  <div class="{{ image }}"></div>
+</button>

@@ -22,11 +22,49 @@ $lightGreyColor: rgb(211,211,211);
 $veryLightGreyColor: rgb(250,249,251);
 $whiteColor: rgb(255,255,255);
 
+// Product Tile Background
+$productTileBackground: rgb(242,242,242);
+
 // Typography
 
-// $buttonLabel:
-//   font-size: 14px,
-//   line-height: 24px,
-//   font-weight: 700
+@mixin headlineH1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 900;
+}
 
+@mixin headlineH2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 900;
+}
 
+@mixin headlineH3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+@mixin headlineH4 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+@mixin headlineH5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+@mixin caption {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin captionSmall {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
