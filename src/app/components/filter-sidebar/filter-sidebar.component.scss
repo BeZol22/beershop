@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variables';
+
+.filter-top {
+  display: flex;
+  height: 24px;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 21px;
+  p {
+    @include caption;
+    font-size: 16px;
+  }
+}
+
+img {
+  width: 24px;
+  height: 24px;
+}
+
+.filter-mid {
+  display: flex;
+  flex-direction: column;
+  p {
+    @include filterMain;
+    padding-bottom: 19px;
+  }
+}

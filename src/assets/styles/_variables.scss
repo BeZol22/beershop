@@ -68,3 +68,9 @@ $productTileBackground: rgb(242,242,242);
   line-height: 20px;
   font-weight: 400;
 }
+
+@mixin filterMain {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}

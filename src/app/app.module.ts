@@ -31,6 +31,8 @@ import { SaleComponent } from './components/badges/sale/sale.component';
 import { SoldOutComponent } from './components/badges/sold-out/sold-out.component';
 import { NewComponent } from './components/badges/new/new.component';
 import { ProductOfTheWeekComponent } from './components/badges/product-of-the-week/product-of-the-week.component';
+import { FilterSidebarComponent } from './components/filter-sidebar/filter-sidebar.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { ProductOfTheWeekComponent } from './components/badges/product-of-the-we
     SoldOutComponent,
     NewComponent,
     ProductOfTheWeekComponent,
+    FilterSidebarComponent,
+    CheckboxComponent,
   ],
   imports: [
     BrowserModule,

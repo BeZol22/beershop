@@ -1,0 +1,35 @@
+@import '../../../assets/styles/variables';
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type=checkbox] {
+  display: block;
+  width: 24px;
+  height: 24px;
+  -webkit-appearance: none;
+  // outline: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-color: black;
+}
+
+input[type=checkbox]:not(:checked) {
+  background-color: $whiteColor;
+  border: 1px solid $darkGreyColor;
+  border-radius: 1px;
+  &:hover {
+    border: 1px solid $primaryColor;
+    &:focus-within {
+      border: 1px solid $focusColor;
+    }
+  }
+}
+
+input[type=checkbox]:checked {
+  background-image: url(../../../assets/images/checkmark_icon.svg);
+}
