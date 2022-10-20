@@ -4,9 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './pages/home/home.component';
-import { ProductListComponent } from './pages/product-list/product-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { AllBeersComponent } from './pages/all-beers/all-beers.component';
@@ -37,8 +35,6 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ProductListComponent,
     ProductDetailsComponent,
     ShoppingCartComponent,
     AllBeersComponent,
@@ -69,7 +65,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // BrowserAnimationsModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
   ],

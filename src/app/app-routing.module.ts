@@ -2,27 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AllBeersComponent } from './pages/all-beers/all-beers.component';
 import { BeerGiftsComponent } from './pages/beer-gifts/beer-gifts.component';
-import { HomeComponent } from './pages/home/home.component';
 import { PackagesComponent } from './pages/packages/packages.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'all-beers', pathMatch: 'full' },
   {
-    path: 'home',
-    component: HomeComponent,
-    children: [
-      {
-        path: 'all-beers',
-        component: AllBeersComponent,
-        children: [{ path: ':id', component: ProductDetailsComponent }],
-      },
-      { path: 'packages', component: PackagesComponent },
-      { path: 'beer-gifts', component: BeerGiftsComponent },
-      { path: 'shopping-cart', component: ShoppingCartComponent },
-    ],
+    path: 'all-beers',
+    component: AllBeersComponent,
+    children: [{ path: ':id', component: ProductDetailsComponent }],
   },
+  { path: 'packages', component: PackagesComponent },
+  { path: 'beer-gifts', component: BeerGiftsComponent },
+  { path: 'shopping-cart', component: ShoppingCartComponent },
+  { path: 'details', component: ProductDetailsComponent },
 ];
 
 @NgModule({

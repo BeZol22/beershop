@@ -1,0 +1,67 @@
+@import '../../../assets/styles/variables';
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+p {
+  margin: 0;
+}
+
+.img-container {
+  display: flex;
+  width: 411px;
+  height: 317px;
+  justify-content: center;
+  background-color: $productTileBackground;
+  overflow: hidden;
+  &:hover img {
+    -webkit-transform:scale(1.5); /* Safari and Chrome */
+    -moz-transform:scale(1.5); /* Firefox */
+    -ms-transform:scale(1.5); /* IE 9 */
+    -o-transform:scale(1.5); /* Opera */
+    transform:scale(1.5);
+  }
+
+}
+
+img {
+  height: 317px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  vertical-align: middle;
+}
+
+.mid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.mid-top-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.beer-name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mid-bottom-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 24px;
+}

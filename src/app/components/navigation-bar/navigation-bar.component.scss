@@ -1,7 +1,7 @@
 .navigation-container {
-  height: 200px;
-  height: 200px;
+  height: 198px;
   width: 100vw;
+  margin-bottom: 200px;
   // background-color: blue;
   // display: flex;
   // align-items: center;
@@ -51,4 +51,8 @@ img {
   flex-direction: row;
   align-items: baseline;
 
+}
+
+hr {
+  margin: 0;
 }

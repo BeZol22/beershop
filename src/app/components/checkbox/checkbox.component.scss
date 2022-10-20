@@ -15,7 +15,7 @@ input[type=checkbox] {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  border-color: black;
+  border-color: $darkGreyColor;
 }
 
 input[type=checkbox]:not(:checked) {
@@ -23,13 +23,17 @@ input[type=checkbox]:not(:checked) {
   border: 1px solid $darkGreyColor;
   border-radius: 1px;
   &:hover {
-    border: 1px solid $primaryColor;
-    &:focus-within {
-      border: 1px solid $focusColor;
-    }
+    border: 1px solid $focusColor;
   }
 }
 
 input[type=checkbox]:checked {
+  background-color: $whiteColor;
+  border: 1px solid $blackColor;
+  border-radius: 1px;
   background-image: url(../../../assets/images/checkmark_icon.svg);
+  background-size: 12px 10px;
+  &:focus-within {
+    border: 1px solid $focusColor;
+  }
 }

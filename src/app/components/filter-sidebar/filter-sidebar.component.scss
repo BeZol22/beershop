@@ -1,11 +1,22 @@
 @import '../../../assets/styles/variables';
 
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  width: 302px;
+  gap: 21px;
+}
+
+p {
+  margin: 0;
+}
+
 .filter-top {
   display: flex;
   height: 24px;
   align-items: center;
   gap: 4px;
-  padding-bottom: 21px;
+  // padding-bottom: 21px;
   p {
     @include caption;
     font-size: 16px;
@@ -20,8 +31,9 @@ img {
 .filter-mid {
   display: flex;
   flex-direction: column;
+  gap: 20px;
   p {
     @include filterMain;
-    padding-bottom: 19px;
+    // padding-bottom: 19px;
   }
 }
