@@ -31,6 +31,7 @@ import { NewComponent } from './components/badges/new/new.component';
 import { ProductOfTheWeekComponent } from './components/badges/product-of-the-week/product-of-the-week.component';
 import { FilterSidebarComponent } from './components/filter-sidebar/filter-sidebar.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { SpinnerComponent } from './components/inputs/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     ProductOfTheWeekComponent,
     FilterSidebarComponent,
     CheckboxComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

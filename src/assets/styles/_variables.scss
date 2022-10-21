@@ -74,3 +74,79 @@ $productTileBackground: rgb(242,242,242);
   font-weight: 600;
   line-height: 26px;
 }
+
+@mixin copy-text-standard {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin copy-text-semi-bold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@mixin copy-text-bold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+@mixin copy-text-uppercase {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin copy-text-standard-link {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $primaryDarkColor;
+}
+
+@mixin caption {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin caption-link {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $primaryDarkColor;
+}
+
+@mixin caption-bold {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+@mixin caption-uppercase-bold {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin button-label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+@mixin caption-small {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin caption-small-bold {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}

@@ -1,0 +1,80 @@
+@import '../../../../assets/styles/variables';
+
+
+// Disabled state missing
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 242px;
+  height: 40px;
+
+}
+
+input {
+  @include copy-text-standard;
+  height: 38px;
+  width: 100%;
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid $darkGreyColor;
+  border-bottom: 1px solid $darkGreyColor;
+  text-align: center;
+  padding: 0;
+  &:hover {
+    outline: 0;
+  }
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.minus-button, .plus-button {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  background-color: $whiteColor;
+  border: 1px solid $darkGreyColor;
+  &:hover .minus-icon, &:hover .plus-icon {
+    background-color: $primaryDarkColor;
+  }
+  &:active {
+    border: 2px solid $focusColor;
+  }
+}
+
+.minus-button {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.plus-button {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+
+
+.minus-icon {
+  width: 24px;
+  height: 24px;
+  background-color: $blackColor;
+  // -webkit-mask: url("../../../../assets/images/minus_icon.svg");
+  mask-image: url("../../../../assets/images/minus_icon.svg");
+}
+
+.plus-icon {
+  width: 24px;
+  height: 24px;
+  background-color: $blackColor;
+  // -webkit-mask: url("../../../../assets/images/plus_icon.svg");
+  mask-image: url("../../../../assets/images/plus_icon.svg");
+}

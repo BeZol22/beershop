@@ -1,0 +1,15 @@
+<div class="container">
+  <button class="minus-button" (click)="decreaseAmount()">
+    <div class="minus-icon"></div>
+  </button>
+  <input
+    type="number"
+    value="1"
+    min="1"
+    (change)="setAmount($event)"
+    #spinnerInput
+  />
+  <button class="plus-button" (click)="increaseAmount()">
+    <div class="plus-icon"></div>
+  </button>
+</div>
