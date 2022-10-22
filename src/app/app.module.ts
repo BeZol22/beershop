@@ -32,6 +32,7 @@ import { ProductOfTheWeekComponent } from './components/badges/product-of-the-we
 import { FilterSidebarComponent } from './components/filter-sidebar/filter-sidebar.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SpinnerComponent } from './components/inputs/spinner/spinner.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { SpinnerComponent } from './components/inputs/spinner/spinner.component'
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

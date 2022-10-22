@@ -1,3 +1,5 @@
+@import '../../../assets/styles/variables';
+
 .container {
   display: flex;
   flex-direction: row;
@@ -15,4 +17,8 @@ label {
 
   width: 93px;
   height: 40px;
+}
+
+.active {
+  border-bottom: 2px solid $primaryDarkColor;
 }
