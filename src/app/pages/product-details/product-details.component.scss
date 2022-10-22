@@ -145,3 +145,48 @@ img {
   flex-direction: column;
   gap: 16px;
 }
+
+.mid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 628px;
+  max-width: 100%;
+  .mid-top-container {
+    @include headlineH2;
+    margin: 0;
+  }
+  .mid-mid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .mid-mid-wrapper-container {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      min-width: 628px;
+      max-width: 800px;
+      padding: 0px 0px 16px;
+      border-bottom: 1px solid $greyColor;
+      .fact {
+        margin: 0;
+        @include copy-text-bold;
+        color: $darkGreyColor;
+        min-width: 109px;
+        max-width: 109px;
+      }
+      .fact-detail {
+        margin: 0;
+        @include copy-text-standard;
+        min-width: 479px;
+        max-width: 600px;
+        color: $blackColor;
+      }
+      hr {
+        padding: 0;
+        margin: 0;
+
+      }
+    }
+  }
+}
