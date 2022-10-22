@@ -35,4 +35,6 @@ export class SpinnerComponent implements OnInit {
       this.inputValue.next(parseInt(this.spinnerInput!.nativeElement.value));
     }
   }
+
+  // User can still input <= 0 values manually typing!!!
 }

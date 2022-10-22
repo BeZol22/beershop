@@ -1,5 +1,9 @@
 @import '../../../../assets/styles/variables';
 
+.container {
+  width: auto;
+}
+
 //ENABLED BUTTON
 .enabled-button {
 
@@ -9,7 +13,7 @@
   align-items: center;
   padding: 0px;
 
-  width: 152px;
+  width: 100%;
   height: 40px;
   left: 20px;
   top: 20px;

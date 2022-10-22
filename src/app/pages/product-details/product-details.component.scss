@@ -2,6 +2,20 @@
 
 .main-container {
   display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: space-between;
+  max-height: 317px;
+}
+
+.top-left-and-mid-container {
+  display: flex;
   flex-direction: row;
   gap: 24px;
 }
@@ -37,13 +51,14 @@ img {
   vertical-align: middle;
 }
 
-.mid-container {
+.top-mid-container {
   display: flex;
   flex-direction: column;
   gap: 27px;
+  min-width: 211px;
 }
 
-.mid-top-container {
+.top-mid-top-container {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -52,16 +67,81 @@ img {
 .beer-name-container {
   display: flex;
   flex-direction: column;
+  h1 {
+    margin: 0;
+    @include headlineH1;
+  }
+  p {
+    margin: 0;
+    @include copy-text-standard;
+    color: $darkGreyColor;
+  }
 }
 
-.mid-bottom-container {
-  display: flex;
-  flex-direction: column;
+.beer-desc.container {
+  p {
+    margin: 0;
+    @include copy-text-standard;
+    color: $blackColor;
+  }
 }
 
-.right-container {
+.top-mid-bottom-container {
   display: flex;
   flex-direction: column;
+  h2 {
+    margin: 0;
+    @include headlineH2;
+  }
+  p {
+    margin: 0;
+    @include caption;
+    color: $darkGreyColor;
+  }
+  a {
+    color: $primaryColor;
+  }
+}
+
+.top-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 32px;
-  margin: 24px;
+  padding: 24px;
+  background-color: $veryLightGreyColor;
+  p {
+    @include copy-text-standard;
+  }
+}
+
+.top-right-top-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  h4 {
+    margin: 0;
+    @include headlineH4;
+  }
+  h2 {
+    margin: 0;
+    @include headlineH2;
+  }
+  p {
+    @include caption;
+  }
+  a {
+    color: $primaryColor;
+  }
+}
+
+.top-right-bottom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
