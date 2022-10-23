@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Beer } from '../models/beer.model';
 import { environment } from 'src/environments/environment';
 
@@ -8,8 +8,6 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class BeersService {
-  // beers$: BehaviorSubject<Beer[]> = new BehaviorSubject<Beer[]>([]);
-
   readonly BASE_URL = environment.apiUrl;
 
   constructor(private http: HttpClient) {}

@@ -1,5 +1,6 @@
 import { Beer } from './../../../models/beer.model';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-tile-mid',
@@ -9,7 +10,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProductTileMidComponent implements OnInit {
   @Input() beer?: Beer;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  navigatoToBeer(id: number) {
+    this.router.navigate([`all-beers/${id}`]);
+  }
 }

@@ -8,15 +8,12 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
 
 const routes: Routes = [
   { path: '', redirectTo: 'all-beers', pathMatch: 'full' },
-  {
-    path: 'all-beers',
-    component: AllBeersComponent,
-    children: [{ path: ':id', component: ProductDetailsComponent }],
-  },
+  { path: 'all-beers', component: AllBeersComponent },
+  { path: 'all-beers/:id', component: ProductDetailsComponent },
   { path: 'packages', component: PackagesComponent },
   { path: 'beer-gifts', component: BeerGiftsComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
-  { path: 'details', component: ProductDetailsComponent },
+  // { path: 'details', component: ProductDetailsComponent },
 ];
 
 @NgModule({

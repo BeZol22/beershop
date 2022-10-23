@@ -1,10 +1,10 @@
 <div class="container">
-  <div class="img-container">
+  <div class="img-container" (click)="navigatoToBeer(beer!.id)">
     <img src="{{ beer?.image_url }}" alt="product image" />
   </div>
   <div class="description-container">
-    <p class="beer-tag">tagline</p>
-    <p class="beer-name">beer namdsfsdfds namdsfsdfd</p>
-    <p class="beer-first-brewed">first brewed</p>
+    <p class="beer-tag">{{ beer?.tagline }}</p>
+    <p class="beer-name" (click)="navigatoToBeer(beer!.id)">{{ beer?.name }}</p>
+    <p class="beer-first-brewed">{{ beer?.first_brewed }}</p>
   </div>
 </div>
