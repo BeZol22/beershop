@@ -3,10 +3,44 @@
     <img src="../../../assets/images/filter_icon.svg" alt="filter icon" />
     <p>FILTER BY</p>
   </div>
-  <div class="filter-mid">
-    <p>Beer Styles</p>
-    <app-checkbox></app-checkbox>
-    <app-checkbox></app-checkbox>
-    <app-checkbox></app-checkbox>
+  <div class="filter-option">
+    <div class="label-container" (click)="isFirstLabelOn = !isFirstLabelOn">
+      <p>Malt</p>
+      <img
+        *ngIf="isFirstLabelOn"
+        src="../../../assets/images/arrow_up_icon.svg"
+        alt="click here to hide this filter-type"
+      />
+      <img
+        *ngIf="!isFirstLabelOn"
+        src="../../../assets/images/arrow_down_icon.svg"
+        alt="click here to show this filter-type"
+      />
+    </div>
+    <ng-container *ngIf="isFirstLabelOn === true">
+      <ng-container *ngFor="let malt of filterService.filters.malt">
+        <app-checkbox [label]="malt.name"></app-checkbox>
+      </ng-container>
+    </ng-container>
+  </div>
+  <div class="filter-option">
+    <div class="label-container" (click)="isSecondLabelOn = !isSecondLabelOn">
+      <p>Hops</p>
+      <img
+        *ngIf="isSecondLabelOn"
+        src="../../../assets/images/arrow_up_icon.svg"
+        alt="click here to hide this filter-type"
+      />
+      <img
+        *ngIf="!isSecondLabelOn"
+        src="../../../assets/images/arrow_down_icon.svg"
+        alt="click here to show this filter-type"
+      />
+    </div>
+    <ng-container *ngIf="isSecondLabelOn === true">
+      <ng-container *ngFor="let hops of filterService.filters.hops">
+        <app-checkbox [label]="hops.name"></app-checkbox>
+      </ng-container>
+    </ng-container>
   </div>
 </div>
