@@ -1,5 +1,9 @@
 @import '../../../assets/styles/variables';
 
+.breadcrumbs {
+  min-width: 410px;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;

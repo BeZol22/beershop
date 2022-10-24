@@ -33,6 +33,7 @@ import { FilterSidebarComponent } from './components/filter-sidebar/filter-sideb
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SpinnerComponent } from './components/inputs/spinner/spinner.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { HttpClientModule } from '@angular/common/http';
     FilterSidebarComponent,
     CheckboxComponent,
     SpinnerComponent,
+    BreadcrumbsComponent,
   ],
   imports: [
     BrowserModule,

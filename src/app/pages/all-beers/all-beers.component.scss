@@ -1,7 +1,15 @@
-.container {
+.breadcrumbs {
+  min-width: 410px;
+}
+
+h1 {
+  min-width: 140px;
+}
+
+.beer-list-container {
   display: flex;
   gap: 24px;
-  margin-top: 200px;
+  margin-top: 56px;
 }
 
 .list-container {

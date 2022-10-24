@@ -1,74 +1,91 @@
-<div class="main-container" *ngFor="let beer of beer | async">
-  <div class="top-container">
-    <div class="top-left-and-mid-container">
-      <div class="left-container">
-        <div class="img-container">
-          <!-- <img src="https://images.punkapi.com/v2/2.png" alt="product image" /> -->
-          <img src="{{ beer?.image_url }}" alt="product image" />
-        </div>
-      </div>
-      <div class="top-mid-container">
-        <div class="top-mid-top-container">
-          <div class="beer-name-container">
-            <h1>{{ beer?.name }}</h1>
-            <p>{{ beer?.tagline }}</p>
-          </div>
-          <div class="beer-desc-container">
-            <p>
-              {{ beer?.description }}
-            </p>
-          </div>
-        </div>
-        <div class="top-mid-bottom-container">
-          <h2>€8.49</h2>
-          <p>Plus <a href="#">shipping costs</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="top-right-container">
-      <div class="top-right-top-container">
-        <p>Delivery time appr. 3-7 workdays</p>
-        <div class="price-container">
-          <h4>total</h4>
-          <h2>€8.49</h2>
-          <p>Prices incl. VAT plus <a href="#">shipping costs</a></p>
-        </div>
-      </div>
-      <div class="top-right-bottom-container">
-        <app-spinner></app-spinner>
-        <app-primary-button buttonWidth="242px"></app-primary-button>
-      </div>
-    </div>
+<ng-container *ngFor="let beer of beer | async">
+  <div class="breadcrumbs">
+    <app-breadcrumbs
+      [label]="'Home'"
+      [style]="'caption'"
+      routerLink="/all-beers"
+    ></app-breadcrumbs>
+    <app-breadcrumbs
+      [label]="'All Beers'"
+      [style]="'caption'"
+      routerLink="/all-beers"
+    ></app-breadcrumbs>
+    <app-breadcrumbs
+      [label]="beer?.name"
+      [style]="'caption-bold'"
+    ></app-breadcrumbs>
   </div>
-  <div class="mid-container">
-    <div class="mid-top-container">
-      <h2>Beer Facts</h2>
+  <div class="main-container">
+    <div class="top-container">
+      <div class="top-left-and-mid-container">
+        <div class="left-container">
+          <div class="img-container">
+            <img src="{{ beer?.image_url }}" alt="product image" />
+          </div>
+        </div>
+        <div class="top-mid-container">
+          <div class="top-mid-top-container">
+            <div class="beer-name-container">
+              <h1>{{ beer?.name }}</h1>
+              <p>{{ beer?.tagline }}</p>
+            </div>
+            <div class="beer-desc-container">
+              <p>
+                {{ beer?.description }}
+              </p>
+            </div>
+          </div>
+          <div class="top-mid-bottom-container">
+            <h2>€8.49</h2>
+            <p>Plus <a href="#">shipping costs</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="top-right-container">
+        <div class="top-right-top-container">
+          <p>Delivery time appr. 3-7 workdays</p>
+          <div class="price-container">
+            <h4>total</h4>
+            <h2>€8.49</h2>
+            <p>Prices incl. VAT plus <a href="#">shipping costs</a></p>
+          </div>
+        </div>
+        <div class="top-right-bottom-container">
+          <app-spinner></app-spinner>
+          <app-primary-button buttonWidth="242px"></app-primary-button>
+        </div>
+      </div>
     </div>
-    <div class="mid-mid-container">
-      <div class="mid-mid-wrapper-container">
-        <p class="fact">First brewed:</p>
-        <p class="fact-detail">
-          {{ beer?.first_brewed }}
-        </p>
+    <div class="mid-container">
+      <div class="mid-top-container">
+        <h2>Beer Facts</h2>
       </div>
-      <div class="mid-mid-wrapper-container">
-        <p class="fact">Brewers tips:</p>
-        <p class="fact-detail">
-          {{ beer?.brewers_tips }}
-        </p>
-      </div>
-      <div class="mid-mid-wrapper-container">
-        <p class="fact">Food pairing:</p>
-        <p class="fact-detail">{{ beer?.food_pairing }}</p>
-      </div>
-      <div class="mid-mid-wrapper-container">
-        <p class="fact">ABV (% ALCOHOL):</p>
-        <p class="fact-detail">{{ beer?.abv }}</p>
-      </div>
-      <!-- <div class="mid-mid-wrapper-container">
+      <div class="mid-mid-container">
+        <div class="mid-mid-wrapper-container">
+          <p class="fact">First brewed:</p>
+          <p class="fact-detail">
+            {{ beer?.first_brewed }}
+          </p>
+        </div>
+        <div class="mid-mid-wrapper-container">
+          <p class="fact">Brewers tips:</p>
+          <p class="fact-detail">
+            {{ beer?.brewers_tips }}
+          </p>
+        </div>
+        <div class="mid-mid-wrapper-container">
+          <p class="fact">Food pairing:</p>
+          <p class="fact-detail">{{ beer?.food_pairing }}</p>
+        </div>
+        <div class="mid-mid-wrapper-container">
+          <p class="fact">ABV (% ALCOHOL):</p>
+          <p class="fact-detail">{{ beer?.abv }}</p>
+        </div>
+        <!-- <div class="mid-mid-wrapper-container">
         <p class="fact">Drinking Temperature (in °C):</p>
         <p class="fact-detail">7-10°</p>
       </div> -->
+      </div>
     </div>
   </div>
-</div>
+</ng-container>
