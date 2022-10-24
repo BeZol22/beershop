@@ -7,5 +7,5 @@ export interface Beer {
   image_url: string;
   abv: number;
   food_pairing: string[];
-  brewers_ips: string;
+  brewers_tips: string;
 }

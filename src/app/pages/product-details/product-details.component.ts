@@ -11,7 +11,7 @@ import { BeersService } from 'src/app/services/beers.service';
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  beer!: Observable<Beer>;
+  beer!: Observable<Beer[]>;
 
   constructor(
     private beerService: BeersService,
@@ -21,6 +21,5 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     const id = +this.route.snapshot.params['id'];
     this.beer = this.beerService.getBeer(id);
-    this.beer.pipe((item) => item);
   }
 }

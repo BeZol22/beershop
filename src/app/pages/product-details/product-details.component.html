@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container" *ngFor="let beer of beer | async">
   <div class="top-container">
     <div class="top-left-and-mid-container">
       <div class="left-container">
@@ -10,14 +10,12 @@
       <div class="top-mid-container">
         <div class="top-mid-top-container">
           <div class="beer-name-container">
-            <h1>Fuerst Wiacek Entertainment</h1>
-            <p>Oso Brew</p>
+            <h1>{{ beer?.name }}</h1>
+            <p>{{ beer?.tagline }}</p>
           </div>
           <div class="beer-desc-container">
             <p>
-              A new version of the Fruit Sour Frutal from Oso Brew in Madrid.
-              This time, blackcurrants were used in addition to blueberries. And
-              in great quantities. You can look forward to a great juice!
+              {{ beer?.description }}
             </p>
           </div>
         </div>
@@ -48,30 +46,29 @@
     </div>
     <div class="mid-mid-container">
       <div class="mid-mid-wrapper-container">
-        <p class="fact">Ingredients:</p>
+        <p class="fact">First brewed:</p>
         <p class="fact-detail">
-          Water, BARLEY MALT, WHEAT, Blueberries, Blackcurrant, Hops, Yeast
+          {{ beer?.first_brewed }}
         </p>
       </div>
       <div class="mid-mid-wrapper-container">
-        <p class="fact">Brewery:</p>
+        <p class="fact">Brewers tips:</p>
         <p class="fact-detail">
-          Oso Brew Co., La Osita, Cava Baja 10, Madrid, 28005, Spain - Import:
-          Brausturm Bierverlag GmbH, Eduardstraße 46-48, 20257 Hamburg, Germany
+          {{ beer?.brewers_tips }}
         </p>
       </div>
       <div class="mid-mid-wrapper-container">
-        <p class="fact">Beer Style:</p>
-        <p class="fact-detail">Fruit Sour</p>
+        <p class="fact">Food pairing:</p>
+        <p class="fact-detail">{{ beer?.food_pairing }}</p>
       </div>
       <div class="mid-mid-wrapper-container">
         <p class="fact">ABV (% ALCOHOL):</p>
-        <p class="fact-detail">6,5</p>
+        <p class="fact-detail">{{ beer?.abv }}</p>
       </div>
-      <div class="mid-mid-wrapper-container">
+      <!-- <div class="mid-mid-wrapper-container">
         <p class="fact">Drinking Temperature (in °C):</p>
         <p class="fact-detail">7-10°</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
