@@ -1,0 +1,153 @@
+// Colors
+
+// Primary
+$primaryColor: rgb(90,176,187);
+$primaryDarkColor: rgb(20,147,164);
+$primaryLightColor: rgb(206,231,235);
+
+// Accent
+$accentVioletColor: rgb(102,49,141);
+$focusColor: rgb(251,130,0);
+
+// Functional
+$succesGreen1Color: rgb(76,175,80);
+$succesGreen2Color: rgb(235,244,230);
+$warningColor: rgb(190,0,40);
+
+// Greyscale
+$blackColor: rgb(0,0,0);
+$darkGreyColor: rgb(123,126,130);
+$greyColor: rgb(207,207,207);
+$lightGreyColor: rgb(211,211,211);
+$veryLightGreyColor: rgb(250,249,251);
+$whiteColor: rgb(255,255,255);
+
+// Product Tile Background
+$productTileBackground: rgb(242,242,242);
+
+// Typography
+
+@mixin headlineH1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 900;
+}
+
+@mixin headlineH2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 900;
+}
+
+@mixin headlineH3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+@mixin headlineH4 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin headlineH5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+@mixin caption {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin captionSmall {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin filterMain {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+@mixin copy-text-standard {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin copy-text-semi-bold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@mixin copy-text-bold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+@mixin copy-text-uppercase {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin copy-text-standard-link {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $primaryDarkColor;
+}
+
+@mixin caption {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin caption-link {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $primaryDarkColor;
+}
+
+@mixin caption-bold {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+@mixin caption-uppercase-bold {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin button-label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+@mixin caption-small {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin caption-small-bold {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
