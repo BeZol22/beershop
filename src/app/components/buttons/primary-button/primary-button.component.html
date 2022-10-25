@@ -1,14 +1,11 @@
 <div class="container" [ngStyle]="{ width: buttonWidth }">
   <button *ngIf="enabled" class="enabled-button">
-    <img
-      src="../../../../assets/images/add_to_cart_icon.svg"
-      alt="add to cart icon"
-    />
+    <img src="assets/images/add_to_cart_icon.svg" alt="add to cart icon" />
     <label class="enabled-label">Add to cart</label>
   </button>
   <button *ngIf="!enabled" class="disabled-button" disabled>
     <img
-      src="../../../../assets/images/disabled_add_to_cart_icon.svg"
+      src="assets/images/disabled_add_to_cart_icon.svg"
       alt="add to cart icon"
     />
     <label class="disabled-label">Add to cart</label>
