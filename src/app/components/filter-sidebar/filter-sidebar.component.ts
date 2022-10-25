@@ -9,6 +9,7 @@ import { FilterService } from 'src/app/services/filter.service';
 export class FilterSidebarComponent implements OnInit {
   isFirstLabelOn: boolean = true;
   isSecondLabelOn: boolean = true;
+  isAlcoholLabelOn: boolean = true;
 
   constructor(public filterService: FilterService) {}
 

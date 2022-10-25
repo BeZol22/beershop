@@ -43,4 +43,47 @@
       </ng-container>
     </ng-container>
   </div>
+  <div class="filter-option">
+    <div class="label-container" (click)="isAlcoholLabelOn = !isAlcoholLabelOn">
+      <p>Alcohol range</p>
+      <img
+        *ngIf="isAlcoholLabelOn"
+        src="../../../assets/images/arrow_up_icon.svg"
+        alt="click here to hide this filter-type"
+      />
+      <img
+        *ngIf="!isAlcoholLabelOn"
+        src="../../../assets/images/arrow_down_icon.svg"
+        alt="click here to show this filter-type"
+      />
+    </div>
+    <ng-container *ngIf="isAlcoholLabelOn === true">
+      <div class="input-field-container">
+        <app-alcohol-input-field
+          [type]="'number'"
+          [placeholder]="'from (%)'"
+          [width]="'92px'"
+          [height]="'40px'"
+        ></app-alcohol-input-field>
+        <app-alcohol-input-field
+          [type]="'number'"
+          [placeholder]="'until (%)'"
+          [width]="'92px'"
+          [height]="'40px'"
+        ></app-alcohol-input-field>
+        <app-text-button
+          [label]="'Apply'"
+          [width]="'85px'"
+          [height]="'40px'"
+        ></app-text-button>
+      </div>
+    </ng-container>
+  </div>
+  <div class="reset-container">
+    <app-secondary-button
+      [label]="'Reset to default'"
+      [width]="'148px'"
+      [height]="'40px'"
+    ></app-secondary-button>
+  </div>
 </div>

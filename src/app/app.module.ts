@@ -34,6 +34,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SpinnerComponent } from './components/inputs/spinner/spinner.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+import { AlcoholInputFieldComponent } from './components/inputs/alcohol-input-field/alcohol-input-field.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
     CheckboxComponent,
     SpinnerComponent,
     BreadcrumbsComponent,
+    AlcoholInputFieldComponent,
   ],
   imports: [
     BrowserModule,

@@ -39,3 +39,17 @@ img {
     align-items: center;
   }
 }
+
+.input-field-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.reset-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
