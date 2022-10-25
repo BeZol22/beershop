@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-alcohol-input-field',
@@ -10,6 +11,9 @@ export class AlcoholInputFieldComponent implements OnInit {
   @Input() placeholder?: string;
   @Input() width?: string;
   @Input() height?: string;
+  @Input() control?: FormControl;
+  @Input() id?: string;
+  @Input() name?: string;
 
   constructor() {}
 

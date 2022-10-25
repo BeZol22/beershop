@@ -58,29 +58,38 @@
       />
     </div>
     <ng-container *ngIf="isAlcoholLabelOn === true">
-      <div class="input-field-container">
+      <div class="input-field-container" [formGroup]="alcoholForm">
         <app-alcohol-input-field
+          [id]="'from'"
+          [name]="'from'"
           [type]="'number'"
           [placeholder]="'from (%)'"
           [width]="'92px'"
           [height]="'40px'"
+          [control]="this.from"
         ></app-alcohol-input-field>
         <app-alcohol-input-field
+          [id]="'until'"
+          [name]="'until'"
           [type]="'number'"
           [placeholder]="'until (%)'"
           [width]="'92px'"
           [height]="'40px'"
+          [control]="this.until"
         ></app-alcohol-input-field>
         <app-text-button
+          [type]="'submit'"
           [label]="'Apply'"
           [width]="'85px'"
           [height]="'40px'"
+          (click)="onAlcoholFilterApplied()"
         ></app-text-button>
       </div>
     </ng-container>
   </div>
   <div class="reset-container">
     <app-secondary-button
+      [type]="'submit'"
       [label]="'Reset to default'"
       [width]="'148px'"
       [height]="'40px'"

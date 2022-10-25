@@ -9,6 +9,7 @@ export class TextButtonComponent implements OnInit {
   @Input() label?: string;
   @Input() width?: string;
   @Input() height?: string;
+  @Input() type?: string;
 
   constructor() {}
 

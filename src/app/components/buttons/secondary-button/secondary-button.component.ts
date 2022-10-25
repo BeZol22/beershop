@@ -9,6 +9,7 @@ export class SecondaryButtonComponent implements OnInit {
   @Input() label?: string;
   @Input() width?: string;
   @Input() height?: string;
+  @Input() type?: string;
 
   constructor() {}
 

@@ -12,8 +12,10 @@ export class BeersService {
 
   constructor(private http: HttpClient) {}
 
-  public getBeers(): Observable<Beer[]> {
-    return this.http.get<Beer[]>(`${this.BASE_URL}beers?page=1&per_page=80`);
+  public getBeers(queryParams: any): Observable<Beer[]> {
+    return this.http.get<Beer[]>(`${this.BASE_URL}beers`, {
+      params: queryParams,
+    });
   }
 
   public getBeer(id: number): Observable<Beer[]> {

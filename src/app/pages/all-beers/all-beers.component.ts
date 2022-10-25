@@ -14,6 +14,6 @@ export class AllBeersComponent implements OnInit {
   constructor(public beersService: BeersService) {}
 
   ngOnInit(): void {
-    this.beers = this.beersService.getBeers();
+    this.beers = this.beersService.getBeers('?page=1&per_page=80');
   }
 }
