@@ -14,8 +14,9 @@
 <div class="beer-list-container">
   <app-filter-sidebar></app-filter-sidebar>
   <div class="list-container">
-    <ng-container *ngFor="let beer of beers | async">
-      <app-product-tile [beer]="beer"></app-product-tile>
-    </ng-container>
+    <app-product-tile
+      *ngFor="let beer of beers"
+      [beer]="beer"
+    ></app-product-tile>
   </div>
 </div>

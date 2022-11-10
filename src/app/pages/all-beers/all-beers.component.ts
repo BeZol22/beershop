@@ -1,7 +1,10 @@
-import { Observable } from 'rxjs';
+import { map, Observable, Subscription } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { BeersService } from 'src/app/services/beers.service';
 import { Beer } from 'src/app/models/beer.model';
+
+import * as fromApp from '../../store/app.reducer';
+import { Store } from '@ngrx/store';
+import * as BeersActions from '../../store/beer.actions';
 
 @Component({
   selector: 'app-all-beers',
@@ -9,11 +12,23 @@ import { Beer } from 'src/app/models/beer.model';
   styleUrls: ['./all-beers.component.scss'],
 })
 export class AllBeersComponent implements OnInit {
-  beers!: Observable<Beer[]>;
+  beers?: Beer[];
+  subscription?: Subscription;
 
-  constructor(public beersService: BeersService) {}
+  constructor(private store: Store<fromApp.AppState>) {}
 
   ngOnInit(): void {
-    this.beers = this.beersService.getBeers('?page=1&per_page=80');
+    this.store.dispatch(BeersActions.fetchBeers());
+
+    this.subscription = this.store
+      .select('beers')
+      .pipe(map((beersState) => beersState.beers))
+      .subscribe((beers: Beer[]) => {
+        this.beers = beers;
+        console.log('hello', this.beers);
+      });
+    // this.beers$ = this.store
+    //   .select('beers')
+    //   .pipe(map((beersState) => beersState.beers));
   }
 }

@@ -35,6 +35,12 @@ import { SpinnerComponent } from './components/inputs/spinner/spinner.component'
 import { HttpClientModule } from '@angular/common/http';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { AlcoholInputFieldComponent } from './components/inputs/alcohol-input-field/alcohol-input-field.component';
+import { EntityDataModule } from '@ngrx/data';
+import { entityConfig } from './entity-metadata';
+import { StoreModule } from '@ngrx/store';
+import { BeerEffects } from './store/beer.effects';
+import { EffectsModule } from '@ngrx/effects';
+import * as fromBeers from './store/beer.reducer';
 
 @NgModule({
   declarations: [
@@ -76,6 +82,10 @@ import { AlcoholInputFieldComponent } from './components/inputs/alcohol-input-fi
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    EntityDataModule.forRoot(entityConfig),
+    StoreModule.forRoot({}),
+    StoreModule.forFeature('beers', fromBeers.beerReducer),
+    EffectsModule.forRoot([BeerEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent],
