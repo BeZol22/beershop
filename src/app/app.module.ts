@@ -41,6 +41,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { EntityStoreModule } from './store/entity-store.module';
 import { StoreModule } from '@ngrx/store';
 import { BeersService } from './pages/all-beers/beers.service';
+import { BeersResolver } from './pages/all-beers/beers.resolver';
 
 const defaultDataServiceConfig: DefaultDataServiceConfig = {
   root: 'https://api.punkapi.com/v2',
@@ -99,6 +100,7 @@ export const entityConfig = {
   providers: [
     { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig },
     BeersService,
+    BeersResolver,
   ],
   bootstrap: [AppComponent],
 })
