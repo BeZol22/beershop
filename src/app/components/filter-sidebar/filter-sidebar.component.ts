@@ -2,7 +2,6 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { FilterService } from 'src/app/services/filter.service';
-import { BeersService } from 'src/app/services/beers.service';
 
 @Component({
   selector: 'app-filter-sidebar',
@@ -19,8 +18,7 @@ export class FilterSidebarComponent implements OnInit {
   constructor(
     public filterService: FilterService,
     fb: FormBuilder,
-    private router: Router,
-    public beerService: BeersService
+    private router: Router
   ) {
     // Need form-validation
     this.alcoholForm = fb.group({

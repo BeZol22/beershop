@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { BeersService } from 'src/app/services/beers.service';
 import { Beer } from 'src/app/models/beer.model';
+import { BeersService } from './beers.service';
 
 @Component({
   selector: 'app-all-beers',
@@ -9,11 +9,15 @@ import { Beer } from 'src/app/models/beer.model';
   styleUrls: ['./all-beers.component.scss'],
 })
 export class AllBeersComponent implements OnInit {
-  beers!: Observable<Beer[]>;
+  beers$?: Observable<Beer[]>;
 
-  constructor(public beersService: BeersService) {}
+  constructor(private beersService: BeersService) {}
 
   ngOnInit(): void {
-    this.beers = this.beersService.getBeers('?page=1&per_page=80');
+    // this.reload();
+    this.beers$ = this.beersService.getAll();
   }
+  // reload() {
+  //   this.beers$ = this.beersService.entities$;
+  // }
 }

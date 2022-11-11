@@ -35,6 +35,21 @@ import { SpinnerComponent } from './components/inputs/spinner/spinner.component'
 import { HttpClientModule } from '@angular/common/http';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { AlcoholInputFieldComponent } from './components/inputs/alcohol-input-field/alcohol-input-field.component';
+import { EntityDataModule, DefaultDataServiceConfig } from '@ngrx/data';
+import { entityMetadata } from './entity-metadata';
+import { EffectsModule } from '@ngrx/effects';
+import { EntityStoreModule } from './store/entity-store.module';
+import { StoreModule } from '@ngrx/store';
+import { BeersService } from './pages/all-beers/beers.service';
+
+const defaultDataServiceConfig: DefaultDataServiceConfig = {
+  root: 'https://api.punkapi.com/v2',
+  timeout: 3000,
+};
+
+export const entityConfig = {
+  entityMetadata,
+};
 
 @NgModule({
   declarations: [
@@ -76,8 +91,15 @@ import { AlcoholInputFieldComponent } from './components/inputs/alcohol-input-fi
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    EffectsModule.forRoot([]),
+    EntityDataModule.forRoot(entityConfig),
+    EntityStoreModule,
+    StoreModule.forRoot({}),
   ],
-  providers: [],
+  providers: [
+    { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig },
+    BeersService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

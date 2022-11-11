@@ -3,8 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Beer } from 'src/app/models/beer.model';
-import { BeersService } from 'src/app/services/beers.service';
-
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -13,13 +11,9 @@ import { BeersService } from 'src/app/services/beers.service';
 export class ProductDetailsComponent implements OnInit {
   beer!: Observable<Beer[]>;
 
-  constructor(
-    private beerService: BeersService,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     const id = +this.route.snapshot.params['id'];
-    this.beer = this.beerService.getBeer(id);
   }
 }
